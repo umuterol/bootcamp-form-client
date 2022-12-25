@@ -1,0 +1,120 @@
+<section class="section-bootcamp">
+  <div class="container">
+    <div class="bootcamp">
+      <div class="bootcamp-text-box">
+        <h2 class="heading-secondary">AngularJS Bootcamp</h2>
+        <p class="bootcamp-text">
+          Boost your web development skills with our intensive AngularJS
+          bootcamp. From setup to building complex apps, our expert instructors
+          will guide you through the process.
+        </p>
+        <form
+          class="bootcamp-form"
+          #form="ngForm"
+          (ngSubmit)="onSaveUser(form)"
+        >
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              [(ngModel)]="user.name"
+              required
+              #name="ngModel"
+              placeholder="John"
+            />
+            <div class="alert-container" *ngIf="!name.valid && formSubmitted">
+              <p *ngIf="name.errors?.['required']">*Name is required</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="lastname">Lastname</label>
+            <input
+              type="text"
+              id="lastname"
+              name="lastname"
+              [(ngModel)]="user.lastname"
+              required
+              #lastname="ngModel"
+              placeholder="Smith"
+            />
+            <div
+              class="alert-container"
+              *ngIf="!lastname.valid && formSubmitted"
+            >
+              <p *ngIf="lastname.errors?.['required']">*Lastname is required</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="birthDate">Birth Date</label>
+            <input
+              type="date"
+              id="birthdate"
+              name="birthdate"
+              [(ngModel)]="user.birthDate"
+              required
+              #birthdate="ngModel"
+            />
+            <div
+              class="alert-container"
+              *ngIf="!birthdate.valid && formSubmitted"
+            >
+              <p *ngIf="birthdate.errors?.['required']">
+                *Birth Date is required
+              </p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              [(ngModel)]="user.email"
+              required
+              email
+              #email="ngModel"
+              placeholder="info@argusteknoloji.com"
+            />
+            <div class="alert-container" *ngIf="!email.valid && formSubmitted">
+              <p *ngIf="email.errors?.['required']">*Email is required</p>
+              <p *ngIf="email.errors?.['email']">*must be in email format.</p>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="phone">Phone Number</label>
+            <input
+              type="text"
+              id="phone"
+              name="phone"
+              [(ngModel)]="user.phoneNumber"
+              required
+              minlength="10"
+              #phone="ngModel"
+              pattern="^[0-9]+$"
+              placeholder="0 312 483 27 47"
+            />
+            <div class="alert-container" *ngIf="!phone.valid && formSubmitted">
+              <p *ngIf="phone.errors?.['required']">
+                *Phone Number is required
+              </p>
+              <p *ngIf="phone.errors?.['pattern']">*Only numbers.</p>
+              <p *ngIf="phone.errors?.['minlength']">
+                *Phone Number must be at least 10 characters long.
+              </p>
+            </div>
+          </div>
+
+          <button type="submit">Sign Up</button>
+        </form>
+      </div>
+
+      <div class="bootcamp-img-box" role="img"></div>
+    </div>
+  </div>
+</section>
