@@ -6,7 +6,7 @@ import { User } from '../models/user.model';
   providedIn: 'root',
 })
 export class RegisterService {
-  private URL = 'https://localhost:7237/api';
+  private URL = 'https://bugfeedback.site/api';
 
   constructor(private http: HttpClient) {}
 

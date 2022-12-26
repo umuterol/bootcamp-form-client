@@ -55,7 +55,7 @@
   border-radius: 9px;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 
-  border-bottom: 5px solid transparent;
+  border-bottom: 0.5rem solid transparent;
 }
 
 .bootcamp input::placeholder {
@@ -71,7 +71,7 @@
   background-color: #4d5b79;
   color: #fff;
   display: inline-block;
-  font-size: 20px;
+  font-size: 2rem;
   font-weight: 600;
   border-radius: 9px;
 
@@ -81,8 +81,8 @@
   cursor: pointer;
 
   /* padding: 12px; */
-  margin-top: 28px;
-  height: 50px;
+  margin-top: 2.8rem;
+  height: 5rem;
   /* align-self: flex-end; */
 }
 
@@ -105,20 +105,57 @@
 /* FORM VALIDATION */
 /*************/
 .form-group .ng-touched.ng-invalid {
-  border-bottom: 5px solid #a94442;
+  border-bottom: 0.5rem solid #a94442;
 }
 
 .form-group .ng-dirty.ng-valid {
-  border-bottom: 5px solid #42a948;
+  border-bottom: 0.5rem solid #42a948;
 }
 
 .alert-container {
-  margin-top: 8px;
+  margin-top: 0.8rem;
 }
 
 .alert-container p {
   color: #df4759;
-  font-size: 14px;
+  font-size: 1.4rem;
   line-height: 1.4;
   margin-bottom: 0.4rem;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 75em) {
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+}
+
+@media (max-width: 59em) {
+  .bootcamp {
+    grid-template-columns: 3fr 2fr;
+  }
+  .bootcamp-form {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 44em) {
+  .heading-secondary {
+    margin-bottom: 4.8rem;
+  }
+}
+
+@media (max-width: 34em) {
+  .bootcamp {
+    grid-template-columns: 1fr;
+  }
+
+  .bootcamp-text-box {
+    padding: 3.2rem;
+  }
+
+  .bootcamp-img-box {
+    height: 32rem;
+    grid-row: 1;
+  }
 }

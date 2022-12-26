@@ -20,3 +20,20 @@ body {
   margin: 0 auto;
   padding: 0 3.2rem;
 }
+
+.alertify-notifier {
+  font-size: 1.8rem;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 75em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+
+@media (max-width: 59em) {
+  html {
+    font-size: 50%;
+  }
+}

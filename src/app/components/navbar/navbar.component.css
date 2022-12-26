@@ -1,11 +1,11 @@
 .header {
-  height: 86px;
+  height: 8.6rem;
   background-color: rgba(204, 208, 217, 0.2);
   display: flex;
   align-items: center;
-  padding: 0 48px;
+  padding: 0 4.8rem;
 }
 
 .logo {
-  height: 36px;
+  height: 3.6rem;
 }
