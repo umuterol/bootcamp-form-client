@@ -21,9 +21,7 @@ export class UserFormComponent implements OnInit {
   };
   formSubmitted: boolean = false;
 
-  constructor(
-    private registerService: RegisterService // private formBuilder: FormBuilder
-  ) {}
+  constructor(private registerService: RegisterService) {}
 
   ngOnInit(): void {}
 
